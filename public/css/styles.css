@@ -1,0 +1,26 @@
+form{
+    margin:0 auto;
+    width:40em;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.url_field {
+    display:block;
+    margin:20px auto;
+    padding:.3em;
+    width:30em;
+    border:.2em solid #000000;
+}
+.url_submit {
+    display:block;
+    margin:20px auto;
+    width:8em;
+    padding:5px;
+    background-color: dodgerblue;
+    border: .2em solid black;
+    color:#ffffff;
+    font-size: 1em;
+    text-decoration:none;
+}
