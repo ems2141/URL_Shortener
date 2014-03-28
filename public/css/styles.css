@@ -1,42 +1,47 @@
-form{
-    width:40em;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+form {
+    margin: 0 auto;
+    width: 40em;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
 }
 
 .url_field {
-    display:block;
-    margin:20px auto;
-    padding:.3em;
-    width:30em;
-    border:.2em solid #000000;
+    display: block;
+    margin: 20px auto;
+    padding: .3em;
+    width: 30em;
+    border: .2em solid #000000;
 }
+
 .url_submit {
-    display:block;
-    margin:20px auto;
-    width:8em;
-    padding:5px;
+    display: block;
+    margin: 20px auto;
+    width: 8em;
+    padding: 5px;
     background-color: dodgerblue;
     border: .2em solid black;
-    color:#ffffff;
+    color: #ffffff;
     font-size: 1em;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 table {
-   width:35em;
+    width: 35em;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 td {
-    padding:5px;
+    padding: 5px;
 }
 
 .row_header {
-    width:9em;
+    width: 9em;
     font-weight: bold;
     font-family: Helvetica, Arial, sans-serif;
 }
