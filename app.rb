@@ -7,9 +7,9 @@ class App < Sinatra::Application
 
   get '/' do
     if URL_ERROR
-      erb :index, locals: {:error => 'The text you entered is not a valid URL'}
+      erb :index, locals: {:error => URL_ERROR[:error_text], :url_value => URL_ERROR[:bad_url]}
     else
-      erb :index, locals: {:error => nil}
+      erb :index, locals: {:error => nil, :url_value => ""}
     end
   end
 
@@ -22,7 +22,7 @@ class App < Sinatra::Application
       URL_ARRAY << {:old => params[:url_input], :new => new_url}
       redirect '/' + current_index + '?stats=true'
     else
-      URL_ERROR = true
+      URL_ERROR = {error_text: "The text you entered is not a valid URL", bad_url: params[:url_input]}
       redirect '/'
     end
 

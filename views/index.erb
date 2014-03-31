@@ -6,9 +6,8 @@
 <body>
 <form action="/" method="post">
   <div class="error"><%= error %></div>
-  <input class="url_field" type="text" name="url_input" placeholder="Enter the URL you would like to 'shorten'">
+  <input class="url_field" type="text" name="url_input" placeholder="Enter the URL you would like to 'shorten'" value="<%= url_value %>">
   <input class="url_submit" type="submit" value="Shorten">
 </form>
-
 </body>
 </html>
