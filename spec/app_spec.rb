@@ -20,8 +20,13 @@ feature "URL Shortener shortens URLs" do
     #User visits shortened URL and gets redirected to the original URL" do
 
     visit '/1'
-
     current_url.should == "http://tutorials.gschool.it/"
+
+    visit '/'
+    fill_in('url_input', with: "Non URL")
+    click_on('Shorten')
+
+    expect(page).to have_content("The text you entered is not a valid URL")
 
   end
 end
