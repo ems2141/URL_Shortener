@@ -1,3 +1,7 @@
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 form {
     margin: 0 auto;
     width: 40em;
@@ -43,5 +47,5 @@ td {
 .row_header {
     width: 9em;
     font-weight: bold;
-    font-family: Helvetica, Arial, sans-serif;
+
 }
