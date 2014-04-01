@@ -23,6 +23,9 @@ class App < Sinatra::Application
       new_url = @base_url + '/' + current_index
       URL_ARRAY << {:old => params[:url_input], :new => new_url}
       redirect '/' + current_index + '?stats=true'
+    elsif params[:url_input].strip.empty?
+      URL_ERROR = {error_text: "URL cannot be blank", bad_url: params[:url_input], status: true}
+      redirect '/'
     else
       URL_ERROR = {error_text: "The text you entered is not a valid URL", bad_url: params[:url_input], status: true}
       redirect '/'

@@ -22,11 +22,18 @@ feature "URL Shortener shortens URLs" do
     visit '/1'
     current_url.should == "http://tutorials.gschool.it/"
 
+    # User submits non-URL
     visit '/'
     fill_in('url_input', with: "Non URL")
     click_on('Shorten')
 
     expect(page).to have_content("The text you entered is not a valid URL")
 
+    # User submits blank form
+    visit '/'
+    fill_in('url_input', with: "")
+    click_on('Shorten')
+
+    expect(page).to have_content("URL cannot be blank")
   end
 end
