@@ -17,6 +17,13 @@ form {
     color: #ff0000;
 }
 
+.shorten {
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .url_field {
     display: block;
     margin: 20px auto;
@@ -39,10 +46,13 @@ form {
 
 table {
     width: 35em;
-    margin: auto;
+    margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 225;
     bottom: 0;
     right: 0;
 }

@@ -17,6 +17,14 @@ feature "URL Shortener shortens URLs" do
     expect(page).to have_content("http://tutorials.gschool.it")
     expect(page).to have_content("http://www.example.com/1")
 
+    # User can easily get back to the homepage
+    click_on('"Shorten" another URL')
+    fill_in('url_input', with: "http://www.google.com")
+    click_on('Shorten')
+
+    expect(page).to have_content("http://www.google.com")
+    expect(page).to have_content("http://www.example.com/2")
+
     #User visits shortened URL and gets redirected to the original URL" do
 
     visit '/1'
@@ -35,5 +43,6 @@ feature "URL Shortener shortens URLs" do
     click_on('Shorten')
 
     expect(page).to have_content("URL cannot be blank")
+
   end
 end
